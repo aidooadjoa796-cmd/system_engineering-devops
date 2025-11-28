@@ -1,0 +1,2 @@
+#!/bin/bash
+mv school.mgc my_first_directory/

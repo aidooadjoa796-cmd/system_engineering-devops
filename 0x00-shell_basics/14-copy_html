@@ -1,0 +1,8 @@
+#!/bin/bash
+# Safely copy all .html files to a folder named html_files
+mkdir -p html_files   # create the folder if it doesn't exist
+shopt -s nullglob     # avoid errors if no .html files exist
+html_files=(*.html)
+if [ ${#html_files[@]} -gt 0 ]; then
+    cp "${html_files[@]}" html_files/
+fi

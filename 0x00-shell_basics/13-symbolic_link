@@ -1,0 +1,6 @@
+#!/bin/bash
+# Safely create a symbolic link named "school_link" pointing to "school.mgc"
+if [ -L school_link ] || [ -e school_link ]; then
+    rm -f school_link
+fi
+ln -s school.mgc school_link

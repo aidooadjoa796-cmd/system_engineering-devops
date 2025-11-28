@@ -1,0 +1,7 @@
+#!/bin/bash
+# List only directories safely
+shopt -s nullglob       # avoids errors if no directories exist
+dirs=(*/)
+for d in "${dirs[@]}"; do
+    echo "$d"
+done
