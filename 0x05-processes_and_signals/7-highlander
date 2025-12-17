@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# A Bash script that loops indefinitely and displays "I am invincible!!!" when receiving SIGTERM
+# A Bash script that loops indefinitely and prints "I am invincible!!!" when receiving SIGTERM
 
-# Function to handle SIGTERM signal
+# Function to handle SIGTERM
 handle_term() {
     echo "I am invincible!!!"
 }
 
-# Trap SIGTERM and call the function
+# Trap SIGTERM to call handle_term
 trap 'handle_term' SIGTERM
 
 # Infinite loop
