@@ -6,10 +6,8 @@
 trap 'echo "I am invincible!!!"' SIGTERM
 
 # Infinite loop
-while true; do
+while true
+do
     echo "To infinity and beyond"
-    # Sleep in small increments to allow immediate SIGTERM response
-    for i in {1..20}; do
-        sleep 0.1
-    done
+    sleep 2
 done
