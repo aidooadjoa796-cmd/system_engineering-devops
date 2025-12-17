@@ -1,1 +1,3 @@
-Processes and Signals Project
+#!/usr/bin/env bash
+#Display all currently running processes of the current user
+ps -auxf
