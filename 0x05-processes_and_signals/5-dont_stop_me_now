@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-# A Bash script that displays only lines containing "bash"
-# shellcheck disable=SC2009
+# A Bash script that stops the 4-to_infinity_and_beyond process
 
-ps -aef | grep bash
+# Find the PID(s) of the running script
+PID=$(pgrep -f 4-to_infinity_and_beyond)
+
+# Kill the process
+kill "$PID"
